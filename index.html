@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himpunan Mahasiswa Informatika</title>
+  <style>
+    :root {
+      --primary: #0b4f84;
+      --accent: #f4b400;
+      --bg: #f4f7fb;
+      --text: #333;
+      --card: #ffffff;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      width: min(1200px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+    header {
+      padding: 3rem 0 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 1rem;
+    }
+    header p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: #525f7f;
+    }
+    .hero {
+      display: grid;
+      gap: 2rem;
+      margin-top: 3rem;
+      align-items: center;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #111;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .section {
+      margin-top: 4rem;
+    }
+    .section h2 {
+      font-size: clamp(2rem, 3vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: #4f5f78;
+      max-width: 800px;
+    }
+    .cards {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      min-height: 250px;
+    }
+    .card h3 {
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+    .card p {
+      color: #606f8c;
+    }
+    .vision-mission {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    .vision-mission div {
+      background: var(--card);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .vision-mission h3 {
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+    .cta {
+      margin-top: 4rem;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+    }
+    .cta img {
+      width: 100%;
+      border-radius: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .cta-content {
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .cta-content h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .cta-content ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+    .cta-content li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #4f5f78;
+    }
+    .cta-content li::before {
+      content: '\2022';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      padding: 2rem 0 1rem;
+      color: #65738c;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="badge">HIMAFOR - Himpunan Mahasiswa Informatika</p>
+      <h1>Menjadi gerakan inovatif untuk generasi digital masa depan</h1>
+      <p>Himpunan Mahasiswa Informatika hadir sebagai wadah kolaborasi, pemimpin baru, dan pusat kreativitas bagi mahasiswa informatika yang ingin membangun ekosistem teknologi kampus yang inklusif, progresif, dan berdampak.</p>
+    </header>
+
+    <section class="hero">
+      <div>
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Mahasiswa Informatika bekerja bersama" />
+      </div>
+      <div>
+        <h2>Identitas Organisasi</h2>
+        <p>Himpunan Mahasiswa Informatika adalah organisasi resmi yang menyatukan semua mahasiswa informatika untuk mengembangkan kemampuan teknis, soft skill, dan jiwa kebersamaan. Kami membangun program-program yang relevan dengan kebutuhan industri digital dan tantangan masa depan.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Visi</h3>
+            <p>Menjadi organisasi mahasiswa informatika yang visioner, inovatif, dan berkontribusi nyata dalam pengembangan teknologi di lingkungan akademik dan masyarakat.</p>
+          </div>
+          <div class="card">
+            <h3>Misi</h3>
+            <p>Mendorong transformasi pengetahuan, kolaborasi proyek, serta penguatan karakter leadership dan kewirausahaan berbasis teknologi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Nilai dan Tujuan</h2>
+      <p>Kami memegang nilai integritas, inovasi, solidaritas, dan keberlanjutan. HIMAFOR berkomitmen mewujudkan lingkungan belajar yang adaptif, berpikiran terbuka, dan siap menghadapi era industri 4.0 serta transformasi digital.</p>
+      <div class="vision-mission">
+        <div>
+          <h3>Visi Strategis</h3>
+          <p>Menjadi pusat pengembangan talenta TI mahasiswa yang mampu menghasilkan solusi digital cerdas untuk tantangan nyata dalam masyarakat dan dunia usaha.</p>
+        </div>
+        <div>
+          <h3>Misi Utama</h3>
+          <ul>
+            <li>Mengadakan pelatihan teknologi, kompetisi, dan workshop berbasis kebutuhan industri.</li>
+            <li>Membangun jaringan kolaborasi dengan komunitas, startup, dan akademisi.</li>
+            <li>Menumbuhkan budaya penelitian, inovasi, serta karya kreatif dalam bidang informatika.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Program Utama</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Workshop & Pelatihan</h3>
+          <p>Program intensif yang meliputi pengembangan web, data science, AI, desain UX/UI, dan manajemen proyek digital.</p>
+        </div>
+        <div class="card">
+          <h3>Kompetisi & Hackathon</h3>
+          <p>Ajang kreativitas untuk menguji kemampuan pemrograman, teamwork, dan pemecahan masalah dengan skala nasional maupun kampus.</p>
+        </div>
+        <div class="card">
+          <h3>Community Project</h3>
+          <p>Kolaborasi nyata dalam bentuk pengabdian masyarakat, pengembangan aplikasi sosial, dan proyek pemberdayaan digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <h3>Bergabung dengan Gerakan HIMAFOR</h3>
+        <p>Kami mengundang mahasiswa Informatika untuk turut serta dalam perjalanan kami membentuk transformasi digital kampus. Bergabung berarti belajar, berkarya, dan menciptakan pengaruh positif bersama.</p>
+        <ul>
+          <li>Pertemuan rutin organisasi</li>
+          <li>Mentoring karier dan pengembangan diri</li>
+          <li>Rangkaian acara tahunan yang inovatif</li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Tim mahasiswa bekerja bersama" />
+      </div>
+    </section>
+
+    <footer>
+      <p>Himpunan Mahasiswa Informatika | Mewujudkan masa depan digital yang kreatif, inklusif, dan berkelanjutan.</p>
+    </footer>
+  </div>
+</body>
+</html>
