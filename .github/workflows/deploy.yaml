@@ -3,8 +3,8 @@ on:
   push:
     branches: [ main ]
     paths: 
-      - 'web-dinamis/**'
-      - '.github/workflows/deploy-dinamis.yml'
+      - 'web-statis/**'
+      - '.github/workflows/deploy.yaml'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./web-statis
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/himafor_2388010009:latest
 
