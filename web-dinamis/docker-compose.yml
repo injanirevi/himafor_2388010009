@@ -8,7 +8,7 @@ services:
       MARIADB_ROOT_PASSWORD: password!123
       MARIADB_DATABASE: dbcompro_2388010009
       MARIADB_USER: userwebdinamis_2388010009
-      MARIADB_PASSWORD: *R-fat.h(s3Ct1dS
+      MARIADB_PASSWORD: "*R-fat.h(s3Ct1dS"
     volumes:
       - db_data:/var/lib/mysql
       - ./db_data/dbcompro_2388010009.sql:/docker-entrypoint-initdb.d/dbcompro_2388010009.sql:ro
@@ -22,7 +22,7 @@ services:
     restart: always
     environment:
       DB_USER: userwebdinamis_2388010009
-      DB_PASSWORD: *R-fat.h(s3Ct1dS
+      DB_PASSWORD: "*R-fat.h(s3Ct1dS"
       DB_NAME: dbcompro_2388010009
       DB_HOST: db-webdinamis
       NEXTAUTH_SECRET : ini-kdkdkdkdkdkkd-hdhdhdhdhdhdh-
