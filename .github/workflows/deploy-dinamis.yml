@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: build and push Docker image
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5.3.0
         with:
           context: ./web-dinamis
@@ -42,7 +42,6 @@ jobs:
           username: ${{ secrets.AWS_USERNAME }}
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           port: 22
-          # SOLUSI: Cukup copy docker-compose.yml saja. File .sql tidak perlu di-upload berulang kali.
           source: "web-dinamis/docker-compose.yml"
           target: "/home/ubuntu/container-dinamis"
 
@@ -54,11 +53,18 @@ jobs:
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           port: 22
           script: |
-            # Masuk ke direktori target utama tempat file docker-compose.yml berada
+            # Masuk ke direktori utama container-dinamis
             cd /home/ubuntu/container-dinamis/web-dinamis
+            
+            # MEMPERBAIKI MASALAH DB: Memastikan folder db_data ada di EC2
+            # Catatan: Pastikan file 'dbcompro_2388010009.sql' sudah kamu letakkan di folder ini secara manual di EC2 jika tidak di-push lewat Git.
+            mkdir -p db_data
             
             # Pasang credential environment variable
             export DOCKERHUB_USERNAME="${{ secrets.DOCKERHUB_USERNAME }}"
+            
+            # Hentikan container lama agar konfigurasi volume ter-refresh dengan bersih
+            docker compose down
             
             # Ambil image terbaru dari Docker Hub dan jalankan ulang container
             docker compose pull
